@@ -1,0 +1,28 @@
+algoritmo ordenar_arreglo
+
+variables
+   a arreglo [5] : entero
+   i, j, aux : entero
+
+inicio
+   para i <- 1 hasta 5 hacer
+      imprimir "Ingrese el valor ", i, " = "
+      leer a[i]
+   finpara
+
+   para i <- 1 hasta 4 hacer
+      para j <- 1 hasta 4 hacer
+         si a[j] > a[j+1] entonces
+            aux <- a[j]
+            a[j] <- a[j+1]
+            a[j+1] <- aux
+         finsi
+      finpara
+   finpara
+
+   imprimirln "Arreglo ordenado de manera ascendente:"
+   para i <- 1 hasta 5 hacer
+      imprimir a[i], " "
+   finpara
+   imprimirln
+fin
